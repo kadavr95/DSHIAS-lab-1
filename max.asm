@@ -1,0 +1,15 @@
+MOV C, [100H]
+ADD D, 100H [100H]
+MOV B,[D]
+
+LOOP
+	DEC D
+	DEC [C]
+	CMP [D][D+1]
+	JZ MOV B[D]
+	CMP C,0
+	JZ END
+J LOOP
+END
+	
+	
